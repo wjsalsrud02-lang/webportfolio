@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 헤더 -->
+    <header>
+        <div class="logo">PORTFOLIO</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- 메인 -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <p>MINGYEONG'S</p>
+            <h1>PORTFOLIO</h1>
+        </div>
+    </section>
+
+    <!-- 소개 -->
+    <section class="about" id="about">
+
+        <!-- 왼쪽 사진 -->
+        <div class="about-image">
+
+            <img src="image/about-image.jpg" alt="프로필사진">
+
+        </div>
+
+        <!-- 오른쪽 내용 -->
+        <div class="about-content">
+
+            <h2><span class="title-box">About Me</span></h2>
+
+            <p class="intro">
+                작은 디테일도 놓치지않고 다양한 환경에서도 반응하는 UI를 설계하여<br>
+                고객에게 최적의 UX를 제공할 수 있는 시스템 웹개발자가 되겠습니다.
+            </p>
+
+            <!-- 학력 -->
+            <div class="info-box">
+
+                <h3>Education</h3>
+
+                <p>
+                    <span class="date">2022.03 ~</span>
+                    수원대학교 전자재료공학과 휴학중 (2027.02 졸업 예정)
+                </p>
+
+                <p>
+                    <span class="date">2021.02</span>
+                    망포고등학교 졸업
+                </p>
+
+            </div>
+
+            <!-- 경력 -->
+            <div class="info-box">
+
+                <h3>Experience</h3>
+
+                <p>
+                    <span class="date">2025.08 ~ 2026.01</span>
+                    기업맞춤형 AI+X 융복합인재 양성 과정
+                </p>
+
+            </div>
+
+            <!-- 자격증 -->
+            <div class="info-box">
+
+                <h3>License</h3>
+
+                <p><span class="date">2026.01</span>TOEIC 720</p>
+                <p><span class="date">2025.12</span>정보기술자격(ITQ)한글엑셀 A등급</p>
+                <p><span class="date">2025.12</span>정보기술자격(ITQ)한글파워포인트 A등급</p>
+                <p><span class="date">2025.02</span>CAD실무능력평가2급</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- 작업물 -->
+    <section class="work" id="work">
+
+        <h2><span class="title-box">My Work</span></h2>
+
+        <div class="work-list">
+
+            <a href="project1.html" class="card">
+
+                <video autoplay muted loop playsinline>
+
+                    <source src="video/project1.mp4" type="video/mp4">
+
+                </video>
+
+                <h3>Project 01</h3>
+
+            </a>
+
+            <a href="project2.html" class="card">
+
+                <video autoplay muted loop playsinline>
+
+                    <source src="video/project2.mp4" type="video/mp4">
+
+                </video>
+
+                <h3>Project 02</h3>
+
+            </a>
+
+            <a href="project3.html" class="card">
+
+                <video autoplay muted loop playsinline>
+
+                    <source src="video/project3.mp4" type="video/mp4">
+
+                </video>
+
+                <h3>Project 03</h3>
+
+            </a>
+
+            <a href="project4.html" class="card">
+
+                <video autoplay muted loop playsinline>
+
+                    <source src="video/project4.mp4" type="video/mp4">
+
+                </video>
+
+                <h3>Project 04</h3>
+
+            </a>
+
+        </div>
+    </section>
+
+    <!-- 연락 -->
+    <section class="contact" id="contact">
+
+        <h2><span class="title-box">Contact</span></h2>
+
+        <p>Name : 전민경<br>
+            Phone : 010 2767 0765<br>
+            Email : bluelcu@naver.com<br>
+            GitHub :<a href="https://github.com/wjsalsrud02-lang"> https://github.com/wjsalsrud02-lang</a></p>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+<script>
+  const about = document.querySelector('.about');
+
+  window.addEventListener('scroll', () => {
+    const triggerPoint = window.innerHeight * 0.8;
+    const aboutTop = about.getBoundingClientRect().top;
+
+    if (aboutTop < triggerPoint) {
+      about.classList.add('show');
+    }
+  });
+</script>
